@@ -17,7 +17,9 @@ pipeline {
             steps {
                 echo 'Push to dockerhub'
                 script {
-                    docker_image.push()
+                    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+                        docker_image.push()
+                    }
                 }
             }
         }
