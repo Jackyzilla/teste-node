@@ -4,17 +4,16 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building image'
+
+                script {
+                    docker.build("rpolisciuc/minha-imagem:v3")
+                }
             }
         }
-        stage('Test') {
+        stage('Push') {
             steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+                echo 'Push to dockerhub'
             }
         }
     }
