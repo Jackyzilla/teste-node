@@ -1,0 +1,11 @@
+{
+  "name": "teste-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:renanpolisciuc/teste-node.git",
+  "author": "Renan de Souza Polisciuc <renan.polisciuc@leads2b.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
